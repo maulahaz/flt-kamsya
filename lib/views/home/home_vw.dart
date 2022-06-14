@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.all(8.0),
-        child: Text('data'),
+        child: Text('data ok after copying'),
       )
     );
   }
