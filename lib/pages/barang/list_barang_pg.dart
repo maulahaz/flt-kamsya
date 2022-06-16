@@ -89,12 +89,12 @@ class ListBarangPage extends StatelessWidget {
                                 InkWell(
                                   
                                   // onTap: () => Get.toNamed(AppRoutes.BARANG_EDIT),
-                                  // onTap: () => barangCtrl.goAndEditBarang(dt),
-                                  onTap: () {
-                                    Get.toNamed(
-                                      AppRoutes.BARANG_EDIT,
-                                      arguments: dt);
-                                      },
+                                  onTap: () => barangCtrl.goAndEditBarang(dt),
+                                  // onTap: () {
+                                  //   Get.toNamed(
+                                  //     AppRoutes.BARANG_EDIT,
+                                  //     arguments: dt);
+                                  //     },
                                   child: Row(
                                     children: [
                                       Container(

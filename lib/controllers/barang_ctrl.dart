@@ -11,7 +11,7 @@ import 'package:kamsya/models/all_models.dart';
 import 'package:kamsya/services/all_services.dart';
 import 'package:kamsya/widgets/all_widgets.dart';
 
-// import '../app_routes.dart';
+import '../app_routes.dart';
 
 class BarangController extends GetxController {
   //--variables:
@@ -131,18 +131,18 @@ class BarangController extends GetxController {
   }
 
   //
-  // void goAndEditBarang(BarangModel barang) {
-  //   barangId = barang.id ?? '';
-  //   txtName?.text = barang.alias ?? '';
-  //   txtWeight?.text = barang.weight ?? '0';
-  //   // txtMarketPrice?.text = barang.marketPrice ?? '0';
-  //   txtMarketPrice?.text =
-  //       MyUtils.convertToIdr(int.parse(barang.marketPrice!), 0);
-  //   txtBuyingPrice?.text =
-  //       MyUtils.convertToIdr(int.parse(barang.buyingPrice!), 0);
-  //   txtNotes?.text = barang.notes ?? '';
-  //   Get.toNamed(AppRoutes.BARANG_EDIT);
-  // }
+  void goAndEditBarang(BarangModel barang) {
+    // barangId = barang.id ?? '';
+    txtName?.text = barang.alias ?? '';
+    txtWeight?.text = barang.weight ?? '0';
+    // txtMarketPrice?.text = barang.marketPrice ?? '0';
+    txtMarketPrice?.text =
+        MyUtils.convertToIdr(barang.marketPrice, 0);
+    txtBuyingPrice?.text =
+        MyUtils.convertToIdr(barang.buyingPrice, 0);
+    txtNotes?.text = barang.notes ?? '';
+    Get.toNamed(AppRoutes.BARANG_EDIT);
+  }
 
   //
   void editBarang() async {
