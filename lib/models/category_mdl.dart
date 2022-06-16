@@ -8,6 +8,12 @@ String categoryModelToJson(List<CategoryModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class CategoryModel {
+  final int? id;
+  final String? name;
+  final int? parentId;
+  final String? groupCateg;
+  final String? description;
+
   CategoryModel({
     this.id,
     this.name,
@@ -16,25 +22,18 @@ class CategoryModel {
     this.description,
   });
 
-  String? id;
-  String? name;
-  String? parentId;
-  String? groupCateg;
-  String? description;
-
-  factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
-        id: json["id"],
-        name: json["name"],
-        parentId: json["parent_id"],
-        groupCateg: json["group_categ"],
-        description: json["description"],
-      );
+  CategoryModel.fromJson(Map<String, dynamic> json)
+    : id = json['id'] as int?,
+      name = json['name'] as String?,
+      parentId = json['parent_id'] as int?,
+      groupCateg = json['group_categ'] as String?,
+      description = json['description'] as String?;
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "parent_id": parentId,
-        "group_categ": groupCateg,
-        "description": description,
-      };
+    'id' : id,
+    'name' : name,
+    'parent_id' : parentId,
+    'group_categ' : groupCateg,
+    'description' : description
+  };
 }

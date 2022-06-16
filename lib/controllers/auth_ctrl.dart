@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:kamsya/app_pages.dart';
+import 'package:kamsya/app_routes.dart';
 import 'package:kamsya/configs/all_configs.dart';
 import 'package:kamsya/services/auth_srv.dart';
 import 'package:kamsya/widgets/all_widgets.dart';

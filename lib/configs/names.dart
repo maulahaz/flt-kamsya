@@ -8,10 +8,9 @@ const String TAG_LINE = 'InshaAllah Barokah'; //'Simple but usefull for anyone';
 const String WA_ADMIN = '971562681844';
 
 //--Services names:
-// const String BASE_URL = "http://10.0.2.2/tron-siode/"; // Emulator
+const String BASE_URL = "http://10.0.2.2/trg-kamsya/"; // Emulator
 // const String BASE_URL = "http://kamsya.com/"; // Real Web
-const String BASE_URL =
-    'http://192.168.0.181/trg-kamsya/'; // Emulator with Real Device or Website
+// const String BASE_URL = 'http://192.168.0.181/trg-kamsya/'; // Emulator with Real Device or Website
 
 const int TIME_OUT_DURATION = 30; //--Seconds
 

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:kamsya/views/home/home_vw.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:kamsya/app_routes.dart';
+import 'package:kamsya/configs/all_configs.dart';
+// import 'package:kamsya/pages/home/home_pg.dart';
 
-void main() {
+void main() async{
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -11,12 +16,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo Test',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeView(),
+    return GetMaterialApp(
+      title: 'KAMSYA',
+      debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.fade,
+      theme: Themes.light,
+      themeMode: ThemeMode.light,
+      darkTheme: Themes.dark,
+      getPages: AppPages.pages,
+      initialRoute: AppRoutes.BARANG,
+      // home: const HomePage(),
     );
   }
 }

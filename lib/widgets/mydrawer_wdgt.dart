@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kamsya/app_pages.dart';
+import 'package:kamsya/app_routes.dart';
 import 'package:kamsya/configs/all_configs.dart';
 import 'package:kamsya/controllers/all_controllers.dart';
 

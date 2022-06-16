@@ -1,5 +1,6 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:get/get.dart';
-import 'views/all_pages.dart';
+import 'pages/all_pages.dart';
 import 'bindings/all_bindings.dart';
 
 class AppRoutes {
@@ -38,35 +39,35 @@ abstract class AppPages {
     // ),
     GetPage(
       name: AppRoutes.HOME,
-      page: () => HomeView(),
-      // binding: HomeBinding(),
+      page: () => HomePage(),
+      binding: HomeBinding(),
     ),
-    // GetPage(
-    //   name: AppRoutes.BARANG,
-    //   page: () => BarangPage(),
-    //   binding: BarangBinding(),
-    // ),
-    // GetPage(
-    //   name: AppRoutes.BARANG_LIST,
-    //   page: () => ListBarangPage(),
-    //   binding: BarangBinding(),
-    //   // transitionDuration: Duration(seconds: 1)
-    //   // transition: Transition.fade,
-    // ),
-    // GetPage(
-    //   name: AppRoutes.BARANG_ADD,
-    //   page: () => AddBarangPage(),
-    //   binding: BarangBinding(),
-    // ),
-    // GetPage(
-    //   name: AppRoutes.BARANG_EDIT,
-    //   page: () => EditBarangPage(),
-    //   binding: BarangBinding(),
-    // ),
-    // GetPage(
-    //   name: AppRoutes.CATEGORY,
-    //   page: () => ListCategoryPage(),
-    //   binding: CategoryBinding(),
-    // ),
+    GetPage(
+      name: AppRoutes.BARANG,
+      page: () => BarangPage(),
+      binding: BarangBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.BARANG_LIST,
+      page: () => ListBarangPage(),
+      binding: BarangBinding(),
+      // transitionDuration: Duration(seconds: 1)
+      // transition: Transition.fade,
+    ),
+    GetPage(
+      name: AppRoutes.BARANG_ADD,
+      page: () => AddBarangPage(),
+      binding: BarangBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.BARANG_EDIT,
+      page: () => EditBarangPage(),
+      binding: BarangBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.CATEGORY,
+      page: () => ListCategoryPage(),
+      binding: CategoryBinding(),
+    ),
   ];
 }
